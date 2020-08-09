@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>John Doe</title>
@@ -6,19 +6,10 @@
     <description>Recent content on John Doe</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 09 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 20 Apr 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://teamtact.github.io/hugobase/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Addition of 2 number</title>
-      <link>https://teamtact.github.io/hugobase/python/basics/addition-of-2-numbers/</link>
-      <pubDate>Sun, 09 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://teamtact.github.io/hugobase/python/basics/addition-of-2-numbers/</guid>
-      <description>print(2+3) 5  </description>
-    </item>
     
     <item>
       <title>Simple Python</title>
@@ -36,15 +27,6 @@
       
       <guid>https://teamtact.github.io/hugobase/python/basics/template/</guid>
       <description>print(&amp;#39;Hello Toronto&amp;#39;) Hello Toronto  print(2) 2  </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://teamtact.github.io/hugobase/python/basics/untitled/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://teamtact.github.io/hugobase/python/basics/untitled/</guid>
-      <description></description>
     </item>
     
   </channel>
