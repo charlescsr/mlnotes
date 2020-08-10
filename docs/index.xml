@@ -2,30 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Charles CSR</title>
-    <link>https://teamtact.github.io/hugobase/</link>
+    <link>https://charlescsr.github.io/mlnotes/</link>
     <description>Recent content on Charles CSR</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 20 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 10 Aug 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://teamtact.github.io/hugobase/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://charlescsr.github.io/mlnotes/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Append value to a list</title>
+      <link>https://charlescsr.github.io/mlnotes/python/basics/list-append/</link>
+      <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://charlescsr.github.io/mlnotes/python/basics/list-append/</guid>
+      <description>li = [1, 2, 3]li.append(4)li [1, 2, 3, 4]  </description>
+    </item>
+    
+    <item>
       <title>Simple Python</title>
-      <link>https://teamtact.github.io/hugobase/python/basics/simple-python/</link>
+      <link>https://charlescsr.github.io/mlnotes/python/basics/simple-python/</link>
       <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://teamtact.github.io/hugobase/python/basics/simple-python/</guid>
+      <guid>https://charlescsr.github.io/mlnotes/python/basics/simple-python/</guid>
       <description>print(&amp;#39;Hello Toronto&amp;#39;) Hello Toronto  print(2) 2  </description>
     </item>
     
     <item>
       <title>Template</title>
-      <link>https://teamtact.github.io/hugobase/python/basics/template/</link>
+      <link>https://charlescsr.github.io/mlnotes/python/basics/template/</link>
       <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://teamtact.github.io/hugobase/python/basics/template/</guid>
+      <guid>https://charlescsr.github.io/mlnotes/python/basics/template/</guid>
       <description>print(&amp;#39;Hello Toronto&amp;#39;) Hello Toronto  print(2) 2  </description>
     </item>
     
