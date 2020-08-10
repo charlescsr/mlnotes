@@ -1,6 +1,6 @@
-baseURL = "https://teamtact.github.io/hugobase/"
+baseURL = "https://charlescsr.github.io/mlnotes/"
 languageCode = "en-us"
-title = "John Doe"
+title = "Charles CSR"
 theme = "berbera"
 
 pygmentsCodeFences=true
