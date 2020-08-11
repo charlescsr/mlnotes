@@ -8,7 +8,22 @@
   </url>
   
   <url>
+    <loc>https://charlescsr.github.io/mlnotes/python/basics/custom-lambda-dataframe/</loc>
+    <lastmod>2020-08-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://charlescsr.github.io/mlnotes/python/basics/spacy-remove-stopwords/</loc>
+    <lastmod>2020-08-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://charlescsr.github.io/mlnotes/python/basics/template/</loc>
+    <lastmod>2020-08-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://charlescsr.github.io/mlnotes/python/basics/tfidf-vectorizer/</loc>
     <lastmod>2020-08-10T00:00:00+00:00</lastmod>
   </url>
   
@@ -18,7 +33,37 @@
   </url>
   
   <url>
+    <loc>https://charlescsr.github.io/mlnotes/python/basics/confusion-matrix/</loc>
+    <lastmod>2020-08-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://charlescsr.github.io/mlnotes/python/basics/version-check/</loc>
+    <lastmod>2020-08-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://charlescsr.github.io/mlnotes/python/basics/regplot-example/</loc>
+    <lastmod>2020-08-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://charlescsr.github.io/mlnotes/python/basics/f1-score-example/</loc>
+    <lastmod>2020-08-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://charlescsr.github.io/mlnotes/python/basics/find-the-best-classifier/</loc>
+    <lastmod>2020-08-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://charlescsr.github.io/mlnotes/python/basics/column-rename/</loc>
+    <lastmod>2020-08-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://charlescsr.github.io/mlnotes/python/basics/tokenise-spacy/</loc>
     <lastmod>2020-08-08T00:00:00+00:00</lastmod>
   </url>
   
