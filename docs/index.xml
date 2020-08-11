@@ -30,6 +30,24 @@
     </item>
     
     <item>
+      <title>Train test split</title>
+      <link>https://charlescsr.github.io/mlnotes/python/basics/train-test-split/</link>
+      <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://charlescsr.github.io/mlnotes/python/basics/train-test-split/</guid>
+      <description>from sklearn.model_selection import train_test_splittrain_x, train_y, test_x, test_y = train_test_split(X, y, test_size=0.3) #0.3 == 30% Test set #Default 25% Test set #My usual value 20% Test set</description>
+    </item>
+    
+    <item>
+      <title>Check Python Version</title>
+      <link>https://charlescsr.github.io/mlnotes/python/basics/version-check/</link>
+      <pubDate>Sat, 08 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://charlescsr.github.io/mlnotes/python/basics/version-check/</guid>
+      <description>!python --version Python 3.7.7  </description>
+    </item>
+    
+    <item>
       <title>Simple Python</title>
       <link>https://charlescsr.github.io/mlnotes/python/basics/simple-python/</link>
       <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
