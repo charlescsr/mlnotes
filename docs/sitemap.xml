@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://charlescsr.github.io/mlnotes/python/plots/basic-bar-plot/</loc>
+    <lastmod>2020-08-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://charlescsr.github.io/mlnotes/python/plots/plotting-categories/</loc>
+    <lastmod>2020-08-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://charlescsr.github.io/mlnotes/python/basics/list-append/</loc>
     <lastmod>2020-08-10T00:00:00+00:00</lastmod>
   </url>
@@ -89,7 +99,7 @@
   
   <url>
     <loc>https://charlescsr.github.io/mlnotes/</loc>
-    <lastmod>2020-08-10T00:00:00+00:00</lastmod>
+    <lastmod>2020-08-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

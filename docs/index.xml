@@ -6,10 +6,28 @@
     <description>Recent content on Charles CSR</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 10 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 12 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://charlescsr.github.io/mlnotes/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Bar plot</title>
+      <link>https://charlescsr.github.io/mlnotes/python/plots/basic-bar-plot/</link>
+      <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://charlescsr.github.io/mlnotes/python/plots/basic-bar-plot/</guid>
+      <description>import matplotlib.pyplot as plt import pandas as pddata = {&amp;#39;fruits&amp;#39;: [&amp;#39;apple&amp;#39;, &amp;#39;banana&amp;#39;, &amp;#39;mango&amp;#39;, &amp;#39;orange&amp;#39;], &amp;#39;price&amp;#39;:[4, 7, 12, 10]}df = pd.DataFrame(data) df  .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; }    fruits price     0 apple 4   1 banana 7   2 mango 12   3 orange 10     plt.</description>
+    </item>
+    
+    <item>
+      <title>Plotting Categories using Subplots</title>
+      <link>https://charlescsr.github.io/mlnotes/python/plots/plotting-categories/</link>
+      <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://charlescsr.github.io/mlnotes/python/plots/plotting-categories/</guid>
+      <description>import matplotlib.pyplot as pltdata = {&amp;#39;apple&amp;#39;: 4, &amp;#39;banana&amp;#39;: 7, &amp;#39;mango&amp;#39;: 12, &amp;#39;orange&amp;#39;: 10} fruit_names = list(data.keys()) prices = list(data.values())fig, ax = plt.subplots(1, 3, figsize=(9, 3), sharey=True) ax[0].bar(fruit_names, prices) ax[1].scatter(fruit_names, prices) ax[2].plot(fruit_names, prices) fig.suptitle(&amp;#39;Plottting Categories&amp;#39;) Text(0.5, 0.98, &#39;Plottting Categories&#39;)  </description>
+    </item>
     
     <item>
       <title>Append value to a list</title>
