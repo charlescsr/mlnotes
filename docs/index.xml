@@ -57,6 +57,15 @@
     </item>
     
     <item>
+      <title>Plotting bar graph with categories</title>
+      <link>https://charlescsr.github.io/mlnotes/python/plots/categorical-bar-plot/</link>
+      <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://charlescsr.github.io/mlnotes/python/plots/categorical-bar-plot/</guid>
+      <description>import matplotlib.pyplot as plt import pandas as pddata = [[&amp;#39;Hello mate&amp;#39;, 0], [&amp;#39;xxXSADF&amp;#39;, 1], [&amp;#39;GG boys&amp;#39;, 0]] df = pd.DataFrame(data, columns=[&amp;#39;sentence&amp;#39;, &amp;#39;spam_ham&amp;#39;]) class_counts = pd.value_counts(df[&amp;#39;spam_ham&amp;#39;], sort = True) class_counts.plot(kind = &amp;#39;bar&amp;#39;, rot=0, color=[&amp;#39;blue&amp;#39;,&amp;#39;red&amp;#39;]) #Added colors as a list  plt.title(&amp;#39;Counts of Ham/Spam&amp;#39;) plt.xticks(range(2), [&amp;#39;Ham&amp;#39;, &amp;#39;Spam&amp;#39;]) plt.xlabel(&amp;#34;Class&amp;#34;) plt.ylabel(&amp;#34;Count&amp;#34;) Text(0, 0.5, &#39;Count&#39;)  </description>
+    </item>
+    
+    <item>
       <title>Subplots that share X axis</title>
       <link>https://charlescsr.github.io/mlnotes/python/plots/subplots/</link>
       <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
