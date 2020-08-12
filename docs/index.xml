@@ -111,6 +111,15 @@
     </item>
     
     <item>
+      <title>Stacked Bar Graph</title>
+      <link>https://charlescsr.github.io/mlnotes/python/plots/stacked-bar-graph/</link>
+      <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://charlescsr.github.io/mlnotes/python/plots/stacked-bar-graph/</guid>
+      <description>import matplotlib.pyplot as plt import numpy as np#With error bars N = 5 menMeans = (20, 35, 30, 35, 27) womenMeans = (25, 32, 34, 20, 25) menStd = (2, 3, 4, 1, 2) womenStd = (3, 5, 2, 3, 3) ind = np.arange(N) width = 0.35 p1 = plt.bar(ind, menMeans, width, yerr=menStd) p2 = plt.bar(ind, womenMeans, width, bottom=menMeans, yerr=womenStd) plt.ylabel(&amp;#39;Scores&amp;#39;) plt.title(&amp;#39;Scores by group and gender&amp;#39;) plt.xticks(ind, (&amp;#39;G1&amp;#39;, &amp;#39;G2&amp;#39;, &amp;#39;G3&amp;#39;, &amp;#39;G4&amp;#39;, &amp;#39;G5&amp;#39;)) plt.</description>
+    </item>
+    
+    <item>
       <title>Template</title>
       <link>https://charlescsr.github.io/mlnotes/python/basics/template/</link>
       <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
