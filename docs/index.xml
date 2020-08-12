@@ -85,6 +85,15 @@ import matplotlib.pyplot as plt plt.Figure.add_axes plt.Figure.add_subplot plt.F
     </item>
     
     <item>
+      <title>Subplots using GridSpec</title>
+      <link>https://charlescsr.github.io/mlnotes/python/plots/grid-spec/</link>
+      <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://charlescsr.github.io/mlnotes/python/plots/grid-spec/</guid>
+      <description>import matplotlib.pyplot as plt from matplotlib.pyplot import GridSpec fig2 = plt.figure(constrained_layout=True) spec2 = GridSpec(ncols=2, nrows=2, figure=fig2) f2_ax1 = fig2.add_subplot(spec2[0, 0]) f2_ax2 = fig2.add_subplot(spec2[0, 1]) f2_ax3 = fig2.add_subplot(spec2[1, 0]) f2_ax4 = fig2.add_subplot(spec2[1, 1]) Here we need to create a separate instance for the Grid Spec whereas for Subplots we just create the instance along with the Fig object</description>
+    </item>
+    
+    <item>
       <title>Violin Plot</title>
       <link>https://charlescsr.github.io/mlnotes/python/plots/violin-plot/</link>
       <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
