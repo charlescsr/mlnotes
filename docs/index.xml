@@ -48,6 +48,15 @@
     </item>
     
     <item>
+      <title>Subplots that share X axis</title>
+      <link>https://charlescsr.github.io/mlnotes/python/plots/subplots/</link>
+      <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://charlescsr.github.io/mlnotes/python/plots/subplots/</guid>
+      <description>import matplotlib.pyplot as pltdata1 = {&amp;#39;objects&amp;#39;: [&amp;#39;apple&amp;#39;, &amp;#39;banana&amp;#39;, &amp;#39;mango&amp;#39;, &amp;#39;orange&amp;#39;, &amp;#39;tomato&amp;#39;, &amp;#39;potato&amp;#39;], &amp;#39;price&amp;#39;:[4, 7, 12, 10, 9, 14]}fig, ax = plt.subplots(2, 1, sharex=True) ax[0].bar(data1[&amp;#39;objects&amp;#39;], data1[&amp;#39;price&amp;#39;]) ax[1].plot(data1[&amp;#39;objects&amp;#39;], data1[&amp;#39;price&amp;#39;]) fig.suptitle(&amp;#39;Subplot example&amp;#39;) Text(0.5, 0.98, &#39;Subplot example&#39;)  </description>
+    </item>
+    
+    <item>
       <title>Violin Plot</title>
       <link>https://charlescsr.github.io/mlnotes/python/plots/violin-plot/</link>
       <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
