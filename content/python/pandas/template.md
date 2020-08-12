@@ -1,7 +1,7 @@
 ---
-title: "Simple Python"
-author: "TACT"
-date: 2019-04-20
+title: "Template"
+author: "Charles"
+date: 2020-08-10
 description: "-"
 type: technical_note
 draft: false
@@ -21,3 +21,8 @@ print(2)
 
     2
 
+
+
+```python
+
+```

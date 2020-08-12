@@ -22,19 +22,19 @@
     
     <item>
       <title>Custom Lambda DataFrame</title>
-      <link>https://charlescsr.github.io/mlnotes/python/basics/custom-lambda-dataframe/</link>
+      <link>https://charlescsr.github.io/mlnotes/python/pandas/custom-lambda-dataframe/</link>
       <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://charlescsr.github.io/mlnotes/python/basics/custom-lambda-dataframe/</guid>
+      <guid>https://charlescsr.github.io/mlnotes/python/pandas/custom-lambda-dataframe/</guid>
       <description>import pandas as pddata = [&amp;#39;Vachitaya aapuuuuuuuuu&amp;#39;,&amp;#39;Sing in the rain&amp;#39; ,&amp;#39;Great power comes wih great responsibility&amp;#39;] df = pd.DataFrame(data, columns = [&amp;#39;Sent&amp;#39;]) df  .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; }    Sent     0 Vachitaya aapuuuuuuuuu   1 Sing in the rain   2 Great power comes wih great responsibility     def sent_length(message): return (len(message))df[&amp;#39;len&amp;#39;] = df[&amp;#39;Sent&amp;#39;].</description>
     </item>
     
     <item>
       <title>Remove stopwords using SpaCy</title>
-      <link>https://charlescsr.github.io/mlnotes/python/basics/spacy-remove-stopwords/</link>
+      <link>https://charlescsr.github.io/mlnotes/python/spacy/spacy-remove-stopwords/</link>
       <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://charlescsr.github.io/mlnotes/python/basics/spacy-remove-stopwords/</guid>
+      <guid>https://charlescsr.github.io/mlnotes/python/spacy/spacy-remove-stopwords/</guid>
       <description>#Remove stop words import spacy from spacy.lang.en.stop_words import STOP_WORDS #from string import punctuationsnlp = spacy.load(&amp;#39;en_core_web_md&amp;#39;)def normalize(msg): doc = nlp(msg) res=[] for token in doc: if(token.is_stop or token.is_digit or token.is_punct or not(token.is_oov)): pass else: res.append(token.lemma_.lower()) return res</description>
     </item>
     
@@ -48,29 +48,65 @@
     </item>
     
     <item>
-      <title>Tfidf Vectorizer</title>
-      <link>https://charlescsr.github.io/mlnotes/python/basics/tfidf-vectorizer/</link>
+      <title>Template</title>
+      <link>https://charlescsr.github.io/mlnotes/python/pandas/template/</link>
       <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://charlescsr.github.io/mlnotes/python/basics/tfidf-vectorizer/</guid>
+      <guid>https://charlescsr.github.io/mlnotes/python/pandas/template/</guid>
+      <description>print(&amp;#39;Hello Toronto&amp;#39;) Hello Toronto  print(2) 2  </description>
+    </item>
+    
+    <item>
+      <title>Template</title>
+      <link>https://charlescsr.github.io/mlnotes/python/plots/template/</link>
+      <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://charlescsr.github.io/mlnotes/python/plots/template/</guid>
+      <description>print(&amp;#39;Hello Toronto&amp;#39;) Hello Toronto  print(2) 2  </description>
+    </item>
+    
+    <item>
+      <title>Template</title>
+      <link>https://charlescsr.github.io/mlnotes/python/sklearn/template/</link>
+      <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://charlescsr.github.io/mlnotes/python/sklearn/template/</guid>
+      <description>print(&amp;#39;Hello Toronto&amp;#39;) Hello Toronto  print(2) 2  </description>
+    </item>
+    
+    <item>
+      <title>Template</title>
+      <link>https://charlescsr.github.io/mlnotes/python/spacy/template/</link>
+      <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://charlescsr.github.io/mlnotes/python/spacy/template/</guid>
+      <description>print(&amp;#39;Hello Toronto&amp;#39;) Hello Toronto  print(2) 2  </description>
+    </item>
+    
+    <item>
+      <title>Tfidf Vectorizer</title>
+      <link>https://charlescsr.github.io/mlnotes/python/sklearn/tfidf-vectorizer/</link>
+      <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://charlescsr.github.io/mlnotes/python/sklearn/tfidf-vectorizer/</guid>
       <description>import pandas as pd from sklearn.feature_extraction.text import TfidfVectorizertfidf_vectorizer = TfidfVectorizer()def feature_extraction(msg): mat = pd.DataFrame(tfidf_vectorizer.fit_transform(msg).toarray(),columns=tfidf_vectorizer.get_feature_names(),index=None) return mat</description>
     </item>
     
     <item>
       <title>Train test split</title>
-      <link>https://charlescsr.github.io/mlnotes/python/basics/train-test-split/</link>
+      <link>https://charlescsr.github.io/mlnotes/python/sklearn/train-test-split/</link>
       <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://charlescsr.github.io/mlnotes/python/basics/train-test-split/</guid>
+      <guid>https://charlescsr.github.io/mlnotes/python/sklearn/train-test-split/</guid>
       <description>from sklearn.model_selection import train_test_splittrain_x, train_y, test_x, test_y = train_test_split(X, y, test_size=0.3) #0.3 == 30% Test set #Default 25% Test set #My usual value 20% Test set</description>
     </item>
     
     <item>
       <title>Confusion Matrix</title>
-      <link>https://charlescsr.github.io/mlnotes/python/basics/confusion-matrix/</link>
+      <link>https://charlescsr.github.io/mlnotes/python/sklearn/confusion-matrix/</link>
       <pubDate>Sun, 09 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://charlescsr.github.io/mlnotes/python/basics/confusion-matrix/</guid>
+      <guid>https://charlescsr.github.io/mlnotes/python/sklearn/confusion-matrix/</guid>
       <description>from sklearn.metrics import confusion_matrixC = &amp;#34;Cat&amp;#34; A = &amp;#34;Ant&amp;#34; B = &amp;#34;Bird&amp;#34;true = [C, A, C, C, A, B] pred = [A, A, C, C, A, C]confusion_matrix(true, pred, labels=[A, B, C]) array([[2, 0, 0], [0, 0, 1], [1, 0, 2]])  </description>
     </item>
     
@@ -85,56 +121,47 @@
     
     <item>
       <title>Example of Regplot in Seaborn</title>
-      <link>https://charlescsr.github.io/mlnotes/python/basics/regplot-example/</link>
+      <link>https://charlescsr.github.io/mlnotes/python/plots/regplot-example/</link>
       <pubDate>Sat, 08 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://charlescsr.github.io/mlnotes/python/basics/regplot-example/</guid>
+      <guid>https://charlescsr.github.io/mlnotes/python/plots/regplot-example/</guid>
       <description>import seaborn as snsx_ex = [1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0] y_ex = [0, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1]sns.regplot(x = x_ex, y = y_ex, marker = &amp;#39;*&amp;#39;, color = &amp;#39;b&amp;#39;) &amp;lt;AxesSubplot:&amp;gt;  </description>
     </item>
     
     <item>
       <title>F1 Score example</title>
-      <link>https://charlescsr.github.io/mlnotes/python/basics/f1-score-example/</link>
+      <link>https://charlescsr.github.io/mlnotes/python/sklearn/f1-score-example/</link>
       <pubDate>Sat, 08 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://charlescsr.github.io/mlnotes/python/basics/f1-score-example/</guid>
+      <guid>https://charlescsr.github.io/mlnotes/python/sklearn/f1-score-example/</guid>
       <description>from sklearn.metrics import f1_scoretrue = [0, 1, 2, 0, 1, 2] pred = [0, 2, 1, 0, 0, 1]f1_score(true, pred, average=&amp;#39;macro&amp;#39;) 0.26666666666666666  f1_score(true, pred, average=&amp;#39;micro&amp;#39;) 0.3333333333333333  f1_score(true, pred, average=&amp;#39;weighted&amp;#39;) 0.26666666666666666  </description>
     </item>
     
     <item>
       <title>Method to find best classifier</title>
-      <link>https://charlescsr.github.io/mlnotes/python/basics/find-the-best-classifier/</link>
+      <link>https://charlescsr.github.io/mlnotes/python/sklearn/find-the-best-classifier/</link>
       <pubDate>Sat, 08 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://charlescsr.github.io/mlnotes/python/basics/find-the-best-classifier/</guid>
+      <guid>https://charlescsr.github.io/mlnotes/python/sklearn/find-the-best-classifier/</guid>
       <description>from sklearn.naive_bayes import MultinomialNB from sklearn.naive_bayes import GaussianNB from sklearn.naive_bayes import BernoulliNB from sklearn.svm import SVC from sklearn.neural_network import MLPClassifier from sklearn.ensemble import AdaBoostClassifier from sklearn.tree import DecisionTreeClassifier from sklearn.ensemble import RandomForestClassifier from sklearn.ensemble import GradientBoostingClassifier from sklearn.linear_model import LogisticRegression from sklearn.model_selection import GridSearchCV from sklearn.metrics import f1_score, confusion_matrixclassifiers = { &amp;#39;mnb&amp;#39;: MultinomialNB(), &amp;#39;gnb&amp;#39;: GaussianNB(), &amp;#39;svm1&amp;#39;: SVC(kernel=&amp;#39;linear&amp;#39;), &amp;#39;svm2&amp;#39;: SVC(kernel=&amp;#39;rbf&amp;#39;), &amp;#39;svm3&amp;#39;: SVC(kernel=&amp;#39;sigmoid&amp;#39;), #FOR SVM USE HYPERPARAMETER TUNING TO BETTER UNDERSTAND WHAT TO TAKE &amp;#39;mlp1&amp;#39;: MLPClassifier(), &amp;#39;mlp2&amp;#39;: MLPClassifier(hidden_layer_sizes=[100,100]), &amp;#39;ada&amp;#39;: AdaBoostClassifier(), &amp;#39;dtc&amp;#39;: DecisionTreeClassifer(), &amp;#39;rfc&amp;#39;: RandomForestClassifer(), &amp;#39;gbc&amp;#39;: GradientBoostingClassifer(), &amp;#39;lr&amp;#39;: LogisticRegression() }f1_scores = dict() for classifier in classifiers: clf = classifiers[classifier] clf.</description>
     </item>
     
     <item>
       <title>Rename Column in DataFrame</title>
-      <link>https://charlescsr.github.io/mlnotes/python/basics/column-rename/</link>
+      <link>https://charlescsr.github.io/mlnotes/python/pandas/column-rename/</link>
       <pubDate>Sat, 08 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://charlescsr.github.io/mlnotes/python/basics/column-rename/</guid>
+      <guid>https://charlescsr.github.io/mlnotes/python/pandas/column-rename/</guid>
       <description>import pandas as pddata = [&amp;#39;Vachitaya aapuuuuuuuuu&amp;#39;,&amp;#39;Sing in the rain&amp;#39; ,&amp;#39;Great power comes wih great responsibility&amp;#39;] df = pd.DataFrame(data, columns = [&amp;#39;Sent&amp;#39;]) df  .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; }    Sent     0 Vachitaya aapuuuuuuuuu   1 Sing in the rain   2 Great power comes wih great responsibility     df.</description>
     </item>
     
     <item>
       <title>Tokenise characters in SpaCy</title>
-      <link>https://charlescsr.github.io/mlnotes/python/basics/tokenise-spacy/</link>
+      <link>https://charlescsr.github.io/mlnotes/python/spacy/tokenise-spacy/</link>
       <pubDate>Sat, 08 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://charlescsr.github.io/mlnotes/python/basics/tokenise-spacy/</guid>
+      <guid>https://charlescsr.github.io/mlnotes/python/spacy/tokenise-spacy/</guid>
       <description>import spacynlp = spacy.load(&amp;#39;en_core_web_md&amp;#39;)def tokenise(words): res = [] for word in words: doc = nlp(word) for token in doc: res.append(token.text) return ressample_words = [&amp;#34;hi and hello&amp;#34;, &amp;#34;thank you and goodnight&amp;#34;]result = tokenise(sample_words) print(result) [&#39;hi&#39;, &#39;and&#39;, &#39;hello&#39;, &#39;thank&#39;, &#39;you&#39;, &#39;and&#39;, &#39;goodnight&#39;]  </description>
-    </item>
-    
-    <item>
-      <title>Simple Python</title>
-      <link>https://charlescsr.github.io/mlnotes/python/basics/simple-python/</link>
-      <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://charlescsr.github.io/mlnotes/python/basics/simple-python/</guid>
-      <description>print(&amp;#39;Hello Toronto&amp;#39;) Hello Toronto  print(2) 2  </description>
     </item>
     
   </channel>

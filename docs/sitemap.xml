@@ -8,12 +8,12 @@
   </url>
   
   <url>
-    <loc>https://charlescsr.github.io/mlnotes/python/basics/custom-lambda-dataframe/</loc>
+    <loc>https://charlescsr.github.io/mlnotes/python/pandas/custom-lambda-dataframe/</loc>
     <lastmod>2020-08-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://charlescsr.github.io/mlnotes/python/basics/spacy-remove-stopwords/</loc>
+    <loc>https://charlescsr.github.io/mlnotes/python/spacy/spacy-remove-stopwords/</loc>
     <lastmod>2020-08-10T00:00:00+00:00</lastmod>
   </url>
   
@@ -23,17 +23,37 @@
   </url>
   
   <url>
-    <loc>https://charlescsr.github.io/mlnotes/python/basics/tfidf-vectorizer/</loc>
+    <loc>https://charlescsr.github.io/mlnotes/python/pandas/template/</loc>
     <lastmod>2020-08-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://charlescsr.github.io/mlnotes/python/basics/train-test-split/</loc>
+    <loc>https://charlescsr.github.io/mlnotes/python/plots/template/</loc>
     <lastmod>2020-08-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://charlescsr.github.io/mlnotes/python/basics/confusion-matrix/</loc>
+    <loc>https://charlescsr.github.io/mlnotes/python/sklearn/template/</loc>
+    <lastmod>2020-08-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://charlescsr.github.io/mlnotes/python/spacy/template/</loc>
+    <lastmod>2020-08-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://charlescsr.github.io/mlnotes/python/sklearn/tfidf-vectorizer/</loc>
+    <lastmod>2020-08-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://charlescsr.github.io/mlnotes/python/sklearn/train-test-split/</loc>
+    <lastmod>2020-08-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://charlescsr.github.io/mlnotes/python/sklearn/confusion-matrix/</loc>
     <lastmod>2020-08-09T00:00:00+00:00</lastmod>
   </url>
   
@@ -43,33 +63,28 @@
   </url>
   
   <url>
-    <loc>https://charlescsr.github.io/mlnotes/python/basics/regplot-example/</loc>
+    <loc>https://charlescsr.github.io/mlnotes/python/plots/regplot-example/</loc>
     <lastmod>2020-08-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://charlescsr.github.io/mlnotes/python/basics/f1-score-example/</loc>
+    <loc>https://charlescsr.github.io/mlnotes/python/sklearn/f1-score-example/</loc>
     <lastmod>2020-08-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://charlescsr.github.io/mlnotes/python/basics/find-the-best-classifier/</loc>
+    <loc>https://charlescsr.github.io/mlnotes/python/sklearn/find-the-best-classifier/</loc>
     <lastmod>2020-08-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://charlescsr.github.io/mlnotes/python/basics/column-rename/</loc>
+    <loc>https://charlescsr.github.io/mlnotes/python/pandas/column-rename/</loc>
     <lastmod>2020-08-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://charlescsr.github.io/mlnotes/python/basics/tokenise-spacy/</loc>
+    <loc>https://charlescsr.github.io/mlnotes/python/spacy/tokenise-spacy/</loc>
     <lastmod>2020-08-08T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://charlescsr.github.io/mlnotes/python/basics/simple-python/</loc>
-    <lastmod>2019-04-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
