@@ -21,6 +21,15 @@
     </item>
     
     <item>
+      <title>Histogram</title>
+      <link>https://charlescsr.github.io/mlnotes/python/plots/histogram/</link>
+      <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://charlescsr.github.io/mlnotes/python/plots/histogram/</guid>
+      <description>import pandas as pd import matplotlib.pyplot as pltdef sent_length(message): return (len(message))data = [&amp;#39;Vachitaya aapuuuuuuuuu&amp;#39;,&amp;#39;Sing in the rain&amp;#39; ,&amp;#39;Great power comes wih great responsibility&amp;#39;] df = pd.DataFrame(data, columns = [&amp;#39;Sent&amp;#39;]) df[&amp;#39;len&amp;#39;] = df[&amp;#39;Sent&amp;#39;].apply(sent_length) plt.hist(df[&amp;#39;len&amp;#39;], bins=15) (array([1., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1.]), array([16. , 17.73333333, 19.46666667, 21.2 , 22.93333333, 24.66666667, 26.4 , 28.13333333, 29.86666667, 31.6 , 33.33333333, 35.06666667, 36.8 , 38.53333333, 40.26666667, 42. ]), &amp;lt;BarContainer object of 15 artists&amp;gt;)  </description>
+    </item>
+    
+    <item>
       <title>Horizontal Bar Chart</title>
       <link>https://charlescsr.github.io/mlnotes/python/plots/horizontal-bar-chart/</link>
       <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>

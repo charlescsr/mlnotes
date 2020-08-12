@@ -16,14 +16,14 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<meta property="og:title" content="Rename Column in DataFrame" />
+<meta property="og:title" content="Histogram" />
 <meta property="og:description" content="-" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://charlescsr.github.io/mlnotes/python/pandas/column-rename/" /><meta property="article:published_time" content="2020-08-08T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2020-08-08T00:00:00&#43;00:00"/>
+<meta property="og:url" content="https://charlescsr.github.io/mlnotes/python/plots/histogram/" /><meta property="article:published_time" content="2020-08-12T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2020-08-12T00:00:00&#43;00:00"/>
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Rename Column in DataFrame"/>
+<meta name="twitter:title" content="Histogram"/>
 <meta name="twitter:description" content="-"/>
 <meta name="generator" content="Hugo 0.50" /> 
     
@@ -32,11 +32,11 @@
 {
   "@context": "http://schema.org",
   "@type": "BlogPosting",
-  "headline": "Rename Column in DataFrame",
-  "url": "https://charlescsr.github.io/mlnotes/python/pandas/column-rename/",
-  "wordCount": "144",
-  "datePublished": "2020-08-08T00:00:00&#43;00:00",
-  "dateModified": "2020-08-08T00:00:00&#43;00:00",
+  "headline": "Histogram",
+  "url": "https://charlescsr.github.io/mlnotes/python/plots/histogram/",
+  "wordCount": "76",
+  "datePublished": "2020-08-12T00:00:00&#43;00:00",
+  "dateModified": "2020-08-12T00:00:00&#43;00:00",
   "author": {
     "@type": "Person",
     "name": "Charles"
@@ -45,7 +45,7 @@
 }
 </script> 
 
-    <title>Rename Column in DataFrame</title>
+    <title>Histogram</title>
 
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
@@ -117,128 +117,30 @@ MathJax.Hub.Config({
   <div class="technical_note">
   <header>
       
-    <h1 class="technical_note_title">Rename Column in DataFrame</h1>
+    <h1 class="technical_note_title">Histogram</h1>
     <div class="technical_note_date">
-      <time datetime=" 2020-08-08T00:00:00Z "> 08 Aug 2020</time>
+      <time datetime=" 2020-08-12T00:00:00Z "> 12 Aug 2020</time>
     </div>
   </header>
   <div class="content">
-  <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Vachitaya aapuuuuuuuuu&#39;</span><span class="p">,</span><span class="s1">&#39;Sing in the rain&#39;</span> <span class="p">,</span><span class="s1">&#39;Great power comes wih great responsibility&#39;</span><span class="p">]</span>  
+  <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">sent_length</span><span class="p">(</span><span class="n">message</span><span class="p">):</span>
+    
+    <span class="k">return</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">message</span><span class="p">))</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Vachitaya aapuuuuuuuuu&#39;</span><span class="p">,</span><span class="s1">&#39;Sing in the rain&#39;</span> <span class="p">,</span><span class="s1">&#39;Great power comes wih great responsibility&#39;</span><span class="p">]</span>  
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Sent&#39;</span><span class="p">])</span>
-<span class="n">df</span></code></pre></div>
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;len&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Sent&#39;</span><span class="p">]</span><span class="o">.</span><span class="nb">apply</span><span class="p">(</span><span class="n">sent_length</span><span class="p">)</span>
 
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Sent</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Vachitaya aapuuuuuuuuu</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Sing in the rain</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Great power comes wih great responsibility</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Sentence&#39;</span><span class="p">]</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span></code></pre></div>
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;len&#39;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span></code></pre></div>
+<pre><code>(array([1., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1.]),
+ array([16.        , 17.73333333, 19.46666667, 21.2       , 22.93333333,
+        24.66666667, 26.4       , 28.13333333, 29.86666667, 31.6       ,
+        33.33333333, 35.06666667, 36.8       , 38.53333333, 40.26666667,
+        42.        ]),
+ &lt;BarContainer object of 15 artists&gt;)
+</code></pre>
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Sentence</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Vachitaya aapuuuuuuuuu</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Sing in the rain</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Great power comes wih great responsibility</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Sentence&#39;</span><span class="p">:</span><span class="s1">&#39;my_sent&#39;</span><span class="p">},</span><span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span></code></pre></div>
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>my_sent</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Vachitaya aapuuuuuuuuu</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Sing in the rain</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Great power comes wih great responsibility</td>
-    </tr>
-  </tbody>
-</table>
-</div>
+<p><img src="histogram_3_1.png" alt="png" /></p>
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"></code></pre></div>
 </div>
   <aside>
