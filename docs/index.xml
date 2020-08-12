@@ -39,6 +39,16 @@
     </item>
     
     <item>
+      <title>Joint plot in Matplotlib</title>
+      <link>https://charlescsr.github.io/mlnotes/python/plots/joint-plot-matplotlib/</link>
+      <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://charlescsr.github.io/mlnotes/python/plots/joint-plot-matplotlib/</guid>
+      <description>Joint plot is generally easy with Seaborn with the command
+import matplotlib.pyplot as plt plt.Figure.add_axes plt.Figure.add_subplot plt.Figure.add_gridspec plt.Axes.scatter plt.Axes.hist import numpy as npnp.random.seed(19680801) x = np.random.randn(1000) y = np.random.randn(1000)def scatter_hist(x, y, ax, ax_histx, ax_histy): # no labels ax_histx.tick_params(axis=&amp;#34;x&amp;#34;, labelbottom=False) ax_histy.tick_params(axis=&amp;#34;y&amp;#34;, labelleft=False) # the scatter plot: ax.scatter(x, y) # now determine nice limits by hand: binwidth = 0.25 xymax = max(np.max(np.abs(x)), np.max(np.abs(y))) lim = (int(xymax/binwidth) + 1) * binwidth bins = np.</description>
+    </item>
+    
+    <item>
       <title>Line Plot</title>
       <link>https://charlescsr.github.io/mlnotes/python/plots/line-plot/</link>
       <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
