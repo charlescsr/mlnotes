@@ -6,10 +6,19 @@
     <description>Recent content on Charles CSR</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 12 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 13 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://charlescsr.github.io/mlnotes/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Different Engines in read_csv</title>
+      <link>https://charlescsr.github.io/mlnotes/python/pandas/types-of-engines/</link>
+      <pubDate>Thu, 13 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://charlescsr.github.io/mlnotes/python/pandas/types-of-engines/</guid>
+      <description>import pandas as pdFILEPATH = &amp;#39;california_housing_train.csv&amp;#39;%%timeit df = pd.read_csv(FILEPATH, engine=&amp;#39;c&amp;#39;) #C engine offers speed 24.8 ms ± 6.24 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)  %%timeit df = pd.read_csv(FILEPATH, engine=&amp;#39;python&amp;#39;) #Python engine is more feature rich but slower 139 ms ± 25.4 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)  </description>
+    </item>
     
     <item>
       <title>Bar plot</title>
