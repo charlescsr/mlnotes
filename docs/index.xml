@@ -31,6 +31,15 @@ import numpy as np #For log function plt.figure(figsize=(12,8)) #Define size of 
     </item>
     
     <item>
+      <title>Define size of Figure</title>
+      <link>https://charlescsr.github.io/mlnotes/python/plots/size-of-figure/</link>
+      <pubDate>Fri, 14 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://charlescsr.github.io/mlnotes/python/plots/size-of-figure/</guid>
+      <description>import matplotlib.pyplot as plt import pandas as pddata = {&amp;#39;fruits&amp;#39;: [&amp;#39;apple&amp;#39;, &amp;#39;banana&amp;#39;, &amp;#39;mango&amp;#39;, &amp;#39;orange&amp;#39;], &amp;#39;price&amp;#39;:[4, 7, 12, 10]}df = pd.DataFrame(data) df  .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; }    fruits price     0 apple 4   1 banana 7   2 mango 12   3 orange 10     plt.</description>
+    </item>
+    
+    <item>
       <title>When using C engine remember this</title>
       <link>https://charlescsr.github.io/mlnotes/python/pandas/imp-when-c-engine/</link>
       <pubDate>Fri, 14 Aug 2020 00:00:00 +0000</pubDate>
