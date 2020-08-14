@@ -12,6 +12,16 @@
     
     
     <item>
+      <title>Better way to show Left Skewed Distributions</title>
+      <link>https://charlescsr.github.io/mlnotes/python/plots/log-of-right-skewed-distribution/</link>
+      <pubDate>Fri, 14 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://charlescsr.github.io/mlnotes/python/plots/log-of-right-skewed-distribution/</guid>
+      <description>import pandas as pd import matplotlib.pyplot as plt import seaborn as snsdf = pd.read_csv(&amp;#39;train.csv&amp;#39;)plt.figure(figsize=(12,8)) sns.distplot(df[&amp;#34;target&amp;#34;].values, bins=50, kde=False) plt.xlabel(&amp;#39;Test&amp;#39;, fontsize=12) plt.title(&amp;#34;Test Histogram&amp;#34;, fontsize=14) plt.show() This is a left skewed distribution. The basis of scoring will vary if this is what they give. Best way to deal with it is show it in a log scale
+import numpy as np #For log function plt.figure(figsize=(12,8)) #Define size of figure sns.distplot(np.log1p(df[&amp;#34;target&amp;#34;].values), bins=50, kde=False) plt.xlabel(&amp;#39;Test&amp;#39;, fontsize=12) plt.</description>
+    </item>
+    
+    <item>
       <title>Categorical Heatmap</title>
       <link>https://charlescsr.github.io/mlnotes/python/plots/categorical-heatmap/</link>
       <pubDate>Fri, 14 Aug 2020 00:00:00 +0000</pubDate>
