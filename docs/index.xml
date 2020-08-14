@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>Categorical Heatmap</title>
+      <link>https://charlescsr.github.io/mlnotes/python/plots/categorical-heatmap/</link>
+      <pubDate>Fri, 14 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://charlescsr.github.io/mlnotes/python/plots/categorical-heatmap/</guid>
+      <description>import numpy as np import matplotlib import matplotlib.pyplot as pltvegetables = [&amp;#34;cucumber&amp;#34;, &amp;#34;tomato&amp;#34;, &amp;#34;lettuce&amp;#34;, &amp;#34;asparagus&amp;#34;, &amp;#34;potato&amp;#34;, &amp;#34;wheat&amp;#34;, &amp;#34;barley&amp;#34;] farmers = [&amp;#34;Farmer Joe&amp;#34;, &amp;#34;Upland Bros.&amp;#34;, &amp;#34;Smith Gardening&amp;#34;, &amp;#34;Agrifun&amp;#34;, &amp;#34;Organiculture&amp;#34;, &amp;#34;BioGoods Ltd.&amp;#34;, &amp;#34;Cornylee Corp.&amp;#34;] harvest = np.array([[0.8, 2.4, 2.5, 3.9, 0.0, 4.0, 0.0], [2.4, 0.0, 4.0, 1.0, 2.7, 0.0, 0.0], [1.1, 2.4, 0.8, 4.3, 1.9, 4.4, 0.0], [0.6, 0.0, 0.3, 0.0, 3.1, 0.0, 0.0], [0.7, 1.7, 0.6, 2.6, 2.2, 6.2, 0.0], [1.3, 1.</description>
+    </item>
+    
+    <item>
       <title>When using C engine remember this</title>
       <link>https://charlescsr.github.io/mlnotes/python/pandas/imp-when-c-engine/</link>
       <pubDate>Fri, 14 Aug 2020 00:00:00 +0000</pubDate>
