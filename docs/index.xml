@@ -6,10 +6,19 @@
     <description>Recent content on Charles CSR</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 14 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 15 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://charlescsr.github.io/mlnotes/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Find Uniqueness in a column without null values</title>
+      <link>https://charlescsr.github.io/mlnotes/python/pandas/pd-nunique/</link>
+      <pubDate>Sat, 15 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://charlescsr.github.io/mlnotes/python/pandas/pd-nunique/</guid>
+      <description>import pandas as pddf = pd.read_csv(&amp;#39;train.csv&amp;#39;) df.head()  .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; }    ID target 48df886f9 0deb4b6a8 34b15f335 a8cb14b00 2f0771a37 30347e683 d08d1fbe3 6ee66e115 ... 3ecc09859 9281abeea 8675bec0b 3a13ed79a f677d4d13 71b203550 137efaa80 fb36b89d9 7e293fbaf 9fc776466     0 000d6aaf2 38000000.0 0.0 0 0.0 0 0 0 0 0 .</description>
+    </item>
     
     <item>
       <title>Better way to show Left Skewed Distributions</title>
