@@ -16,14 +16,14 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<meta property="og:title" content="Subplots using GridSpec" />
+<meta property="og:title" content="Find Null values in DF" />
 <meta property="og:description" content="-" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://charlescsr.github.io/mlnotes/python/plots/grid-spec/" /><meta property="article:published_time" content="2020-08-12T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2020-08-12T00:00:00&#43;00:00"/>
+<meta property="og:url" content="https://charlescsr.github.io/mlnotes/python/pandas/null-values/" /><meta property="article:published_time" content="2020-08-15T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2020-08-15T00:00:00&#43;00:00"/>
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Subplots using GridSpec"/>
+<meta name="twitter:title" content="Find Null values in DF"/>
 <meta name="twitter:description" content="-"/>
 <meta name="generator" content="Hugo 0.50" /> 
     
@@ -32,11 +32,11 @@
 {
   "@context": "http://schema.org",
   "@type": "BlogPosting",
-  "headline": "Subplots using GridSpec",
-  "url": "https://charlescsr.github.io/mlnotes/python/plots/grid-spec/",
-  "wordCount": "57",
-  "datePublished": "2020-08-12T00:00:00&#43;00:00",
-  "dateModified": "2020-08-12T00:00:00&#43;00:00",
+  "headline": "Find Null values in DF",
+  "url": "https://charlescsr.github.io/mlnotes/python/pandas/null-values/",
+  "wordCount": "58",
+  "datePublished": "2020-08-15T00:00:00&#43;00:00",
+  "dateModified": "2020-08-15T00:00:00&#43;00:00",
   "author": {
     "@type": "Person",
     "name": "Charles"
@@ -45,7 +45,7 @@
 }
 </script> 
 
-    <title>Subplots using GridSpec</title>
+    <title>Find Null values in DF</title>
 
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
@@ -117,23 +117,33 @@ MathJax.Hub.Config({
   <div class="technical_note">
   <header>
       
-    <h1 class="technical_note_title">Subplots using GridSpec</h1>
+    <h1 class="technical_note_title">Find Null values in DF</h1>
     <div class="technical_note_date">
-      <time datetime=" 2020-08-12T00:00:00Z "> 12 Aug 2020</time>
+      <time datetime=" 2020-08-15T00:00:00Z "> 15 Aug 2020</time>
     </div>
   </header>
   <div class="content">
-  <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">import</span> <span class="n">GridSpec</span>
-<span class="n">fig2</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">constrained_layout</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-<span class="n">spec2</span> <span class="o">=</span> <span class="n">GridSpec</span><span class="p">(</span><span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">nrows</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">figure</span><span class="o">=</span><span class="n">fig2</span><span class="p">)</span>
-<span class="n">f2_ax1</span> <span class="o">=</span> <span class="n">fig2</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="n">spec2</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
-<span class="n">f2_ax2</span> <span class="o">=</span> <span class="n">fig2</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="n">spec2</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
-<span class="n">f2_ax3</span> <span class="o">=</span> <span class="n">fig2</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="n">spec2</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
-<span class="n">f2_ax4</span> <span class="o">=</span> <span class="n">fig2</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="n">spec2</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span></code></pre></div>
-<p><img src="grid-spec_1_0.png" alt="png" /></p>
+  <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;train.csv&#39;</span><span class="p">)</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="nb">sum</span><span class="p">()</span><span class="o">.</span><span class="nb">any</span><span class="p">()</span></code></pre></div>
+<pre><code>False
+</code></pre>
 
-<p>Here we need to create a separate instance for the Grid Spec whereas for Subplots we just create the instance along with the Fig object</p>
+<p>If this value is True we need to find the columns that are null</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="nb">sum</span><span class="p">()</span></code></pre></div>
+<pre><code>ID           0
+target       0
+48df886f9    0
+0deb4b6a8    0
+34b15f335    0
+            ..
+71b203550    0
+137efaa80    0
+fb36b89d9    0
+7e293fbaf    0
+9fc776466    0
+Length: 4993, dtype: int64
+</code></pre>
+
+<p>No values were null so the 4th cell was not needed</p>
 
 </div>
   <aside>

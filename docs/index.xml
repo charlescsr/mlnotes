@@ -12,12 +12,31 @@
     
     
     <item>
+      <title>Find Null values in DF</title>
+      <link>https://charlescsr.github.io/mlnotes/python/pandas/null-values/</link>
+      <pubDate>Sat, 15 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://charlescsr.github.io/mlnotes/python/pandas/null-values/</guid>
+      <description>import pandas as pddf = pd.read_csv(&amp;#39;train.csv&amp;#39;)df.isnull().sum().any() False  If this value is True we need to find the columns that are null
+df.isnull().sum() ID 0 target 0 48df886f9 0 0deb4b6a8 0 34b15f335 0 .. 71b203550 0 137efaa80 0 fb36b89d9 0 7e293fbaf 0 9fc776466 0 Length: 4993, dtype: int64  No values were null so the 4th cell was not needed</description>
+    </item>
+    
+    <item>
       <title>Find Uniqueness in a column without null values</title>
       <link>https://charlescsr.github.io/mlnotes/python/pandas/pd-nunique/</link>
       <pubDate>Sat, 15 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://charlescsr.github.io/mlnotes/python/pandas/pd-nunique/</guid>
       <description>import pandas as pddf = pd.read_csv(&amp;#39;train.csv&amp;#39;) df.head()  .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; }    ID target 48df886f9 0deb4b6a8 34b15f335 a8cb14b00 2f0771a37 30347e683 d08d1fbe3 6ee66e115 ... 3ecc09859 9281abeea 8675bec0b 3a13ed79a f677d4d13 71b203550 137efaa80 fb36b89d9 7e293fbaf 9fc776466     0 000d6aaf2 38000000.0 0.0 0 0.0 0 0 0 0 0 .</description>
+    </item>
+    
+    <item>
+      <title>Spearman Coefficient</title>
+      <link>https://charlescsr.github.io/mlnotes/python/scipy/spearman-coefficient/</link>
+      <pubDate>Sat, 15 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://charlescsr.github.io/mlnotes/python/scipy/spearman-coefficient/</guid>
+      <description>import pandas as pd from scipy.stats import spearmanrdf = pd.read_csv(&amp;#39;train.csv&amp;#39;)labels = [] values = [] for col in df.columns: if col not in [&amp;#34;ID&amp;#34;, &amp;#34;target&amp;#34;]: labels.append(col) values.append(spearmanr(df[col.values], df[&amp;#39;target&amp;#39;].values)[0]) correlation_df = pd.DataFrame({&amp;#39;column_label&amp;#39;:labels, &amp;#39;correlation_val&amp;#39;:vals}) correlation_df = correlation_df.sort_values(by=&amp;#39;correlation_val&amp;#39;) correlation_df = correlation_df[(correlation_df[&amp;#39;correlation_val&amp;#39;])] IN PROGRESS</description>
     </item>
     
     <item>
