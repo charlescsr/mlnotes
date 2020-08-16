@@ -3,6 +3,26 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://charlescsr.github.io/mlnotes/python/lightgbm/simple-lightgbm/</loc>
+    <lastmod>2020-08-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://charlescsr.github.io/mlnotes/python/pandas/max-number-of-columns/</loc>
+    <lastmod>2020-08-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://charlescsr.github.io/mlnotes/python/sklearn/extra-trees/</loc>
+    <lastmod>2020-08-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://charlescsr.github.io/mlnotes/python/plots/correlation-heatmap/</loc>
+    <lastmod>2020-08-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://charlescsr.github.io/mlnotes/python/plots/plot-spearman/</loc>
     <lastmod>2020-08-16T00:00:00+00:00</lastmod>
   </url>
@@ -119,6 +139,11 @@
   
   <url>
     <loc>https://charlescsr.github.io/mlnotes/python/basics/template/</loc>
+    <lastmod>2020-08-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://charlescsr.github.io/mlnotes/python/lightgbm/template/</loc>
     <lastmod>2020-08-10T00:00:00+00:00</lastmod>
   </url>
   

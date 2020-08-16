@@ -12,6 +12,42 @@
     
     
     <item>
+      <title>Baseline LightGBM model</title>
+      <link>https://charlescsr.github.io/mlnotes/python/lightgbm/simple-lightgbm/</link>
+      <pubDate>Sun, 16 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://charlescsr.github.io/mlnotes/python/lightgbm/simple-lightgbm/</guid>
+      <description>import lightgbm as lgbdef run_lgb(train_x, train_y, val_x, val_y, test_x): parameters = { &amp;#39;objective&amp;#39;: &amp;#39;regression&amp;#39;, &amp;#39;metric&amp;#39;: &amp;#39;rmse&amp;#39;, &amp;#39;num_leaves&amp;#39;: 30, &amp;#39;learning_rate&amp;#39;: 0.01, &amp;#39;bagging_fraction&amp;#39;: 0.7, &amp;#39;feature_fraction&amp;#39;: 0.7, &amp;#39;bagging_frequency&amp;#39;: 5, &amp;#39;bagging_seed&amp;#39;: 2018, &amp;#39;verbosity&amp;#39;: -1 } lgtrain = lgb.Dataset(train_x, label=train_y) lgval = lgb.Dataset(val_x, label=val_y) evals_result = {} model = lgb.train(parameters, lgtrain, 1000, valid_sets=[lgval], early_stopping_rounds=100, verbose_eval=200, evals_result=evals_result) pred_test_y = model.predict(test_x, num_iteration=model.best_iteration) return pred_test_y, model, evals_result After creating this you can call KFold cross validation in another snippet</description>
+    </item>
+    
+    <item>
+      <title>Change maximum columns to display</title>
+      <link>https://charlescsr.github.io/mlnotes/python/pandas/max-number-of-columns/</link>
+      <pubDate>Sun, 16 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://charlescsr.github.io/mlnotes/python/pandas/max-number-of-columns/</guid>
+      <description>import pandas as pd pd.options.display.max_columns = 9999 df = pd.read_csv(&amp;#39;california_housing_train.csv&amp;#39;)df.head()  .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; }    longitude latitude housing_median_age total_rooms total_bedrooms population households median_income median_house_value     0 -114.31 34.19 15.0 5612.0 1283.0 1015.0 472.0 1.4936 66900.0   1 -114.47 34.40 19.0 7650.0 1901.0 1129.0 463.0 1.</description>
+    </item>
+    
+    <item>
+      <title>Extra Trees Regressor</title>
+      <link>https://charlescsr.github.io/mlnotes/python/sklearn/extra-trees/</link>
+      <pubDate>Sun, 16 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://charlescsr.github.io/mlnotes/python/sklearn/extra-trees/</guid>
+      <description>from sklearn import ensemblemodel = ensemble.ExtraTreesRegressor(n_estimators=200, max_depth=20, max_features=0.5, n_jobs=-1, random_state=0) model.fit(tr_x, tr_y) With Tuning the parameters can be even better</description>
+    </item>
+    
+    <item>
+      <title>Heatmap to show Correlation</title>
+      <link>https://charlescsr.github.io/mlnotes/python/plots/correlation-heatmap/</link>
+      <pubDate>Sun, 16 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://charlescsr.github.io/mlnotes/python/plots/correlation-heatmap/</guid>
+      <description>import pandas as pd import warnings warnings.filterwarnings(&amp;#34;ignore&amp;#34;) from scipy.stats import spearmanr import matplotlib.pyplot as plt import seaborn as snstrain = pd.read_csv(&amp;#39;train.csv&amp;#39;)labels = [] values = [] for col in train.columns: if col not in [&amp;#34;ID&amp;#34;, &amp;#34;target&amp;#34;]: labels.append(col) values.append(spearmanr(train[col].values, train[&amp;#39;target&amp;#39;].values)[0]) correlation_df = pd.DataFrame({&amp;#39;column_label&amp;#39;:labels, &amp;#39;correlation_val&amp;#39;:values}) correlation_df = correlation_df.sort_values(by=&amp;#39;correlation_val&amp;#39;) correlation_df = correlation_df[(correlation_df[&amp;#39;correlation_val&amp;#39;]&amp;gt;0.1) | (correlation_df[&amp;#39;correlation_val&amp;#39;]&amp;lt;-0.1)]columns = correlation_df[(correlation_df[&amp;#39;correlation_val&amp;#39;]&amp;gt;0.11) | (correlation_df[&amp;#39;correlation_val&amp;#39;]&amp;lt;-0.11)].column_label.tolist() tmp = train[columns] comat = tmp.corr(method=&amp;#39;spearman&amp;#39;) #Since we used spearman coefficient fig, ax = plt.subplots(figsize=(30,30)) sns.</description>
+    </item>
+    
+    <item>
       <title>Plotting Spearman Coefficient using barh</title>
       <link>https://charlescsr.github.io/mlnotes/python/plots/plot-spearman/</link>
       <pubDate>Sun, 16 Aug 2020 00:00:00 +0000</pubDate>
@@ -227,6 +263,15 @@ import matplotlib.pyplot as plt plt.Figure.add_axes plt.Figure.add_subplot plt.F
       <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://charlescsr.github.io/mlnotes/python/basics/template/</guid>
+      <description>print(&amp;#39;Hello Toronto&amp;#39;) Hello Toronto  print(2) 2  </description>
+    </item>
+    
+    <item>
+      <title>Template</title>
+      <link>https://charlescsr.github.io/mlnotes/python/lightgbm/template/</link>
+      <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://charlescsr.github.io/mlnotes/python/lightgbm/template/</guid>
       <description>print(&amp;#39;Hello Toronto&amp;#39;) Hello Toronto  print(2) 2  </description>
     </item>
     
