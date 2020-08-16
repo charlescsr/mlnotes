@@ -48,6 +48,15 @@
     </item>
     
     <item>
+      <title>Plot Importance in LightGBM</title>
+      <link>https://charlescsr.github.io/mlnotes/python/plots/plot-importance-of-lightgbm-model/</link>
+      <pubDate>Sun, 16 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://charlescsr.github.io/mlnotes/python/plots/plot-importance-of-lightgbm-model/</guid>
+      <description>import lightgbm as lgb import matplotlib.pyplot as pltfig, ax = plt.subplots(figsize=(14,20)) lgb.plot_importance(model, max_num_features=50, height=0.8, ax=ax) #ax.grid(False) Prints in grid format plt.title(&amp;#34;LightGBM - Feature Importance&amp;#34;, fontsize=16) plt.show() </description>
+    </item>
+    
+    <item>
       <title>Plotting Spearman Coefficient using barh</title>
       <link>https://charlescsr.github.io/mlnotes/python/plots/plot-spearman/</link>
       <pubDate>Sun, 16 Aug 2020 00:00:00 +0000</pubDate>
