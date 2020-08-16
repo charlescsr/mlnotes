@@ -6,10 +6,19 @@
     <description>Recent content on Charles CSR</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 15 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 16 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://charlescsr.github.io/mlnotes/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Plotting Spearman Coefficient using barh</title>
+      <link>https://charlescsr.github.io/mlnotes/python/plots/plot-spearman/</link>
+      <pubDate>Sun, 16 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://charlescsr.github.io/mlnotes/python/plots/plot-spearman/</guid>
+      <description>import pandas as pd from scipy.stats import spearmanr import matplotlib.pyplot as plt import numpy as np import warnings #Used primarily to ignore warnings warnings.filterwarnings(&amp;#34;ignore&amp;#34;)df = pd.read_csv(&amp;#39;train.csv&amp;#39;)labels = [] values = [] for col in df.columns: if col not in [&amp;#34;ID&amp;#34;, &amp;#34;target&amp;#34;]: labels.append(col) values.append(spearmanr(df[col].values, df[&amp;#39;target&amp;#39;].values)[0]) correlation_df = pd.DataFrame({&amp;#39;column_label&amp;#39;:labels, &amp;#39;correlation_val&amp;#39;:values}) correlation_df = correlation_df.sort_values(by=&amp;#39;correlation_val&amp;#39;) correlation_df = correlation_df[(correlation_df[&amp;#39;correlation_val&amp;#39;]&amp;gt;0.1) | (correlation_df[&amp;#39;correlation_val&amp;#39;]&amp;lt;-0.1)]index = np.arange(correlation_df.shape[0]) width = 0.9 fig, ax = plt.subplots(figsize=(10,25)) rec = ax.barh(index, np.array(correlation_df.correlation_val.values), color=&amp;#39;r&amp;#39;) ax.</description>
+    </item>
     
     <item>
       <title>Find Null values in DF</title>
@@ -36,7 +45,7 @@ df.isnull().sum() ID 0 target 0 48df886f9 0 0deb4b6a8 0 34b15f335 0 .. 71b203550
       <pubDate>Sat, 15 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://charlescsr.github.io/mlnotes/python/scipy/spearman-coefficient/</guid>
-      <description>import pandas as pd from scipy.stats import spearmanrdf = pd.read_csv(&amp;#39;train.csv&amp;#39;)labels = [] values = [] for col in df.columns: if col not in [&amp;#34;ID&amp;#34;, &amp;#34;target&amp;#34;]: labels.append(col) values.append(spearmanr(df[col.values], df[&amp;#39;target&amp;#39;].values)[0]) correlation_df = pd.DataFrame({&amp;#39;column_label&amp;#39;:labels, &amp;#39;correlation_val&amp;#39;:vals}) correlation_df = correlation_df.sort_values(by=&amp;#39;correlation_val&amp;#39;) correlation_df = correlation_df[(correlation_df[&amp;#39;correlation_val&amp;#39;])] IN PROGRESS</description>
+      <description>import pandas as pd from scipy.stats import spearmanr import numpy as np import warnings #Used primarily to ignore warnings warnings.filterwarnings(&amp;#34;ignore&amp;#34;)df = pd.read_csv(&amp;#39;train.csv&amp;#39;)labels = [] values = [] for col in df.columns: if col not in [&amp;#34;ID&amp;#34;, &amp;#34;target&amp;#34;]: labels.append(col) values.append(spearmanr(df[col].values, df[&amp;#39;target&amp;#39;].values)[0]) correlation_df = pd.DataFrame({&amp;#39;column_label&amp;#39;:labels, &amp;#39;correlation_val&amp;#39;:values}) correlation_df = correlation_df.sort_values(by=&amp;#39;correlation_val&amp;#39;) correlation_df = correlation_df[(correlation_df[&amp;#39;correlation_val&amp;#39;]&amp;gt;0.1) | (correlation_df[&amp;#39;correlation_val&amp;#39;]&amp;lt;-0.1)] correlation_df  .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .</description>
     </item>
     
     <item>
