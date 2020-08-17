@@ -21,6 +21,15 @@
     </item>
     
     <item>
+      <title>KFold Cross Validation</title>
+      <link>https://charlescsr.github.io/mlnotes/python/sklearn/kfold-validation/</link>
+      <pubDate>Mon, 17 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://charlescsr.github.io/mlnotes/python/sklearn/kfold-validation/</guid>
+      <description>from sklearn.model_selection import KFoldk_fold = KFold(n_splits=5, shuffle=True, random_state=2017) pred_test_final = 0 5 folds are specified to show that 1 fold is for test and remaining is for train set. This is repeated for the next fold and so on. Minimum needs to be 2 for d_ind, v_ind in k_fold.split(train_x): d_x, v_x = train_x.loc[d_ind, :], train_x.loc[v_ind, :] d_y, v_y = train_y[d_ind], train_y[v_ind] pred_test, model, evals_result = run_lgb(d_x, d_y, v_x, v_y, test_x) #Running LightGBM here pred_test_final += pred_test pred_test_final /= 5 pred_test_final = np.</description>
+    </item>
+    
+    <item>
       <title>Baseline LightGBM model</title>
       <link>https://charlescsr.github.io/mlnotes/python/lightgbm/simple-lightgbm/</link>
       <pubDate>Sun, 16 Aug 2020 00:00:00 +0000</pubDate>
