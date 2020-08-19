@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://charlescsr.github.io/mlnotes/python/statistics/ecdf/</loc>
+    <lastmod>2020-08-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://charlescsr.github.io/mlnotes/python/pandas/get-dummies/</loc>
     <lastmod>2020-08-17T00:00:00+00:00</lastmod>
   </url>
@@ -183,6 +188,11 @@
   </url>
   
   <url>
+    <loc>https://charlescsr.github.io/mlnotes/python/statistics/template/</loc>
+    <lastmod>2020-08-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://charlescsr.github.io/mlnotes/python/sklearn/tfidf-vectorizer/</loc>
     <lastmod>2020-08-10T00:00:00+00:00</lastmod>
   </url>
@@ -229,7 +239,7 @@
   
   <url>
     <loc>https://charlescsr.github.io/mlnotes/</loc>
-    <lastmod>2020-08-17T00:00:00+00:00</lastmod>
+    <lastmod>2020-08-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
