@@ -6,10 +6,19 @@
     <description>Recent content on Charles CSR</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 19 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 22 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://charlescsr.github.io/mlnotes/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Bigrams Function</title>
+      <link>https://charlescsr.github.io/mlnotes/python/spacy/bigrams/</link>
+      <pubDate>Sat, 22 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://charlescsr.github.io/mlnotes/python/spacy/bigrams/</guid>
+      <description>def bigram(doc): &amp;#39;&amp;#39;&amp;#39;Create list for result&amp;#39;&amp;#39;&amp;#39; result = list() &amp;#39;&amp;#39;&amp;#39;Create list containing no punctuations&amp;#39;&amp;#39;&amp;#39; sentence = list() &amp;#39;&amp;#39;&amp;#39;Parse throught the list and add the tokens that are words&amp;#39;&amp;#39;&amp;#39; for token in doc: if token.is_alpha: sentence.append(token) for word in range(len(sentence) - 1): firstword = sentence[word] secondword = sentence[word + 1] element = [firstword, secondword] result.append(element) return result </description>
+    </item>
     
     <item>
       <title>Custom ECDF Function</title>

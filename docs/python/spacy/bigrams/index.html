@@ -16,14 +16,14 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<meta property="og:title" content="Example of Regplot in Seaborn" />
+<meta property="og:title" content="Bigrams Function" />
 <meta property="og:description" content="-" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://charlescsr.github.io/mlnotes/python/plots/regplot-example/" /><meta property="article:published_time" content="2020-08-08T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2020-08-08T00:00:00&#43;00:00"/>
+<meta property="og:url" content="https://charlescsr.github.io/mlnotes/python/spacy/bigrams/" /><meta property="article:published_time" content="2020-08-22T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2020-08-22T00:00:00&#43;00:00"/>
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Example of Regplot in Seaborn"/>
+<meta name="twitter:title" content="Bigrams Function"/>
 <meta name="twitter:description" content="-"/>
 <meta name="generator" content="Hugo 0.50" /> 
     
@@ -32,11 +32,11 @@
 {
   "@context": "http://schema.org",
   "@type": "BlogPosting",
-  "headline": "Example of Regplot in Seaborn",
-  "url": "https://charlescsr.github.io/mlnotes/python/plots/regplot-example/",
-  "wordCount": "45",
-  "datePublished": "2020-08-08T00:00:00&#43;00:00",
-  "dateModified": "2020-08-08T00:00:00&#43;00:00",
+  "headline": "Bigrams Function",
+  "url": "https://charlescsr.github.io/mlnotes/python/spacy/bigrams/",
+  "wordCount": "56",
+  "datePublished": "2020-08-22T00:00:00&#43;00:00",
+  "dateModified": "2020-08-22T00:00:00&#43;00:00",
   "author": {
     "@type": "Person",
     "name": "Charles"
@@ -45,7 +45,7 @@
 }
 </script> 
 
-    <title>Example of Regplot in Seaborn</title>
+    <title>Bigrams Function</title>
 
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
@@ -117,20 +117,30 @@ MathJax.Hub.Config({
   <div class="technical_note">
   <header>
       
-    <h1 class="technical_note_title">Example of Regplot in Seaborn</h1>
+    <h1 class="technical_note_title">Bigrams Function</h1>
     <div class="technical_note_date">
-      <time datetime=" 2020-08-08T00:00:00Z "> 08 Aug 2020</time>
+      <time datetime=" 2020-08-22T00:00:00Z "> 22 Aug 2020</time>
     </div>
   </header>
   <div class="content">
-  <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">seaborn</span> <span class="kn">as</span> <span class="nn">sns</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">x_ex</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+  <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">bigram</span><span class="p">(</span><span class="n">doc</span><span class="p">):</span>
+    <span class="s1">&#39;&#39;&#39;Create list for result&#39;&#39;&#39;</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="s1">&#39;&#39;&#39;Create list containing no punctuations&#39;&#39;&#39;</span>
+    <span class="n">sentence</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
 
-<span class="n">y_ex</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">sns</span><span class="o">.</span><span class="n">regplot</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">x_ex</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">y_ex</span><span class="p">,</span> <span class="n">marker</span> <span class="o">=</span> <span class="s1">&#39;*&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;b&#39;</span><span class="p">)</span></code></pre></div>
-<pre><code>&lt;AxesSubplot:&gt;
-</code></pre>
+    <span class="s1">&#39;&#39;&#39;Parse throught the list and add the tokens that are words&#39;&#39;&#39;</span>
+    <span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">doc</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">token</span><span class="o">.</span><span class="n">is_alpha</span><span class="p">:</span>
+            <span class="n">sentence</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">token</span><span class="p">)</span>
 
-<p><img src="regplot-example_3_1.png" alt="png" /></p>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"></code></pre></div>
+    <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sentence</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">firstword</span> <span class="o">=</span> <span class="n">sentence</span><span class="p">[</span><span class="n">word</span><span class="p">]</span>
+        <span class="n">secondword</span> <span class="o">=</span> <span class="n">sentence</span><span class="p">[</span><span class="n">word</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>
+        <span class="n">element</span> <span class="o">=</span> <span class="p">[</span><span class="n">firstword</span><span class="p">,</span> <span class="n">secondword</span><span class="p">]</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">result</span> </code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"></code></pre></div>
 </div>
   <aside>
       
