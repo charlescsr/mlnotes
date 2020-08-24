@@ -16,14 +16,14 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<meta property="og:title" content="Histogram" />
+<meta property="og:title" content="Displacy for Custom NER" />
 <meta property="og:description" content="-" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://charlescsr.github.io/mlnotes/python/plots/histogram/" /><meta property="article:published_time" content="2020-08-12T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2020-08-12T00:00:00&#43;00:00"/>
+<meta property="og:url" content="https://charlescsr.github.io/mlnotes/python/spacy/displacy/" /><meta property="article:published_time" content="2020-08-23T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2020-08-23T00:00:00&#43;00:00"/>
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Histogram"/>
+<meta name="twitter:title" content="Displacy for Custom NER"/>
 <meta name="twitter:description" content="-"/>
 <meta name="generator" content="Hugo 0.50" /> 
     
@@ -32,11 +32,11 @@
 {
   "@context": "http://schema.org",
   "@type": "BlogPosting",
-  "headline": "Histogram",
-  "url": "https://charlescsr.github.io/mlnotes/python/plots/histogram/",
-  "wordCount": "76",
-  "datePublished": "2020-08-12T00:00:00&#43;00:00",
-  "dateModified": "2020-08-12T00:00:00&#43;00:00",
+  "headline": "Displacy for Custom NER",
+  "url": "https://charlescsr.github.io/mlnotes/python/spacy/displacy/",
+  "wordCount": "133",
+  "datePublished": "2020-08-23T00:00:00&#43;00:00",
+  "dateModified": "2020-08-23T00:00:00&#43;00:00",
   "author": {
     "@type": "Person",
     "name": "Charles"
@@ -45,7 +45,7 @@
 }
 </script> 
 
-    <title>Histogram</title>
+    <title>Displacy for Custom NER</title>
 
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
@@ -117,30 +117,34 @@ MathJax.Hub.Config({
   <div class="technical_note">
   <header>
       
-    <h1 class="technical_note_title">Histogram</h1>
+    <h1 class="technical_note_title">Displacy for Custom NER</h1>
     <div class="technical_note_date">
-      <time datetime=" 2020-08-12T00:00:00Z "> 12 Aug 2020</time>
+      <time datetime=" 2020-08-23T00:00:00Z "> 23 Aug 2020</time>
     </div>
   </header>
   <div class="content">
-  <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">sent_length</span><span class="p">(</span><span class="n">message</span><span class="p">):</span>
-    
-    <span class="k">return</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">message</span><span class="p">))</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Vachitaya aapuuuuuuuuu&#39;</span><span class="p">,</span><span class="s1">&#39;Sing in the rain&#39;</span> <span class="p">,</span><span class="s1">&#39;Great power comes wih great responsibility&#39;</span><span class="p">]</span>  
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Sent&#39;</span><span class="p">])</span>
-
-<span class="n">df</span><span class="p">[</span><span class="s1">&#39;len&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Sent&#39;</span><span class="p">]</span><span class="o">.</span><span class="nb">apply</span><span class="p">(</span><span class="n">sent_length</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;len&#39;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span></code></pre></div>
-<pre><code>(array([1., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1.]),
- array([16.        , 17.73333333, 19.46666667, 21.2       , 22.93333333,
-        24.66666667, 26.4       , 28.13333333, 29.86666667, 31.6       ,
-        33.33333333, 35.06666667, 36.8       , 38.53333333, 40.26666667,
-        42.        ]),
- &lt;BarContainer object of 15 artists&gt;)
+  <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">spacy</span>
+<span class="n">nlp</span> <span class="o">=</span> <span class="n">spacy</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;en&#39;</span><span class="p">)</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">spacy</span> <span class="kn">import</span> <span class="n">displacy</span>
+<span class="k">def</span> <span class="nf">explain_text_entities</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="n">doc</span> <span class="o">=</span> <span class="n">nlp</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">ent</span> <span class="ow">in</span> <span class="n">doc</span><span class="o">.</span><span class="n">ents</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Entity: {ent}, Label: {ent.label_}, {spacy.explain(ent.label_)}&#39;</span><span class="p">)</span>
+    <span class="n">displacy</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;ent&#39;</span><span class="p">,</span> <span class="n">jupyter</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">t</span> <span class="o">=</span> <span class="s1">&#39;No different than Apple ORG . To play a specific list of music you must have an Amazon of Spotify PRODUCT “plus/prime/etc” account. So you must pay to play “your” music. 3 CARDINAL stars for that reason. Everything else is great .&#39;</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">explain_text_entities</span><span class="p">(</span><span class="n">t</span><span class="p">)</span></code></pre></div>
+<pre><code>Entity: Apple ORG, Label: ORG, Companies, agencies, institutions, etc.
+Entity: 3, Label: CARDINAL, Numerals that do not fall under another type
 </code></pre>
 
-<p><img src="histogram_3_1.png" alt="png" /></p>
+<p><span class="tex2jax_ignore"><div class="entities" style="line-height: 2.5; direction: ltr">No different than
+<mark class="entity" style="background: #7aecec; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    Apple ORG
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">ORG</span>
+</mark>
+ . To play a specific list of music you must have an Amazon of Spotify PRODUCT “plus/prime/etc” account. So you must pay to play “your” music.
+<mark class="entity" style="background: #e4e7d2; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    3
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">CARDINAL</span>
+</mark>
+ CARDINAL stars for that reason. Everything else is great .</div></span></p>
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"></code></pre></div>
 </div>
   <aside>

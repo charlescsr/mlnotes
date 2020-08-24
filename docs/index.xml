@@ -6,10 +6,19 @@
     <description>Recent content on Charles CSR</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 22 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 23 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://charlescsr.github.io/mlnotes/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Displacy for Custom NER</title>
+      <link>https://charlescsr.github.io/mlnotes/python/spacy/displacy/</link>
+      <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://charlescsr.github.io/mlnotes/python/spacy/displacy/</guid>
+      <description>import spacy nlp = spacy.load(&amp;#39;en&amp;#39;)from spacy import displacy def explain_text_entities(text): doc = nlp(text) for ent in doc.ents: print(f&amp;#39;Entity: {ent}, Label: {ent.label_}, {spacy.explain(ent.label_)}&amp;#39;) displacy.render(doc, style=&amp;#39;ent&amp;#39;, jupyter=True)t = &amp;#39;No different than Apple ORG . To play a specific list of music you must have an Amazon of Spotify PRODUCT “plus/prime/etc” account. So you must pay to play “your” music. 3 CARDINAL stars for that reason. Everything else is great .&amp;#39;explain_text_entities(t) Entity: Apple ORG, Label: ORG, Companies, agencies, institutions, etc.</description>
+    </item>
     
     <item>
       <title>Bigrams Function</title>
