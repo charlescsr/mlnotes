@@ -16,14 +16,14 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<meta property="og:title" content="KFold Cross Validation" />
+<meta property="og:title" content="Plot Feature Importance" />
 <meta property="og:description" content="-" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://charlescsr.github.io/mlnotes/python/sklearn/kfold-validation/" /><meta property="article:published_time" content="2020-08-17T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2020-08-17T00:00:00&#43;00:00"/>
+<meta property="og:url" content="https://charlescsr.github.io/mlnotes/python/plots/feature-importance/" /><meta property="article:published_time" content="2020-09-16T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2020-09-16T00:00:00&#43;00:00"/>
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="KFold Cross Validation"/>
+<meta name="twitter:title" content="Plot Feature Importance"/>
 <meta name="twitter:description" content="-"/>
 <meta name="generator" content="Hugo 0.50" /> 
     
@@ -32,11 +32,11 @@
 {
   "@context": "http://schema.org",
   "@type": "BlogPosting",
-  "headline": "KFold Cross Validation",
-  "url": "https://charlescsr.github.io/mlnotes/python/sklearn/kfold-validation/",
-  "wordCount": "83",
-  "datePublished": "2020-08-17T00:00:00&#43;00:00",
-  "dateModified": "2020-08-17T00:00:00&#43;00:00",
+  "headline": "Plot Feature Importance",
+  "url": "https://charlescsr.github.io/mlnotes/python/plots/feature-importance/",
+  "wordCount": "72",
+  "datePublished": "2020-09-16T00:00:00&#43;00:00",
+  "dateModified": "2020-09-16T00:00:00&#43;00:00",
   "author": {
     "@type": "Person",
     "name": "Charles"
@@ -45,7 +45,7 @@
 }
 </script> 
 
-    <title>KFold Cross Validation</title>
+    <title>Plot Feature Importance</title>
 
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
@@ -117,25 +117,35 @@ MathJax.Hub.Config({
   <div class="technical_note">
   <header>
       
-    <h1 class="technical_note_title">KFold Cross Validation</h1>
+    <h1 class="technical_note_title">Plot Feature Importance</h1>
     <div class="technical_note_date">
-      <time datetime=" 2020-08-17T00:00:00Z "> 17 Aug 2020</time>
+      <time datetime=" 2020-09-16T00:00:00Z "> 16 Sep 2020</time>
     </div>
   </header>
   <div class="content">
-  
+  <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">plot_feature_importance</span><span class="p">(</span><span class="n">importance</span><span class="p">,</span><span class="n">names</span><span class="p">,</span><span class="n">model_type</span><span class="p">):</span>
 
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">KFold</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">k_fold</span> <span class="o">=</span> <span class="n">KFold</span><span class="p">(</span><span class="n">n_splits</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">2017</span><span class="p">)</span>
-<span class="n">pred_test_final</span> <span class="o">=</span> <span class="mi">0</span></code></pre></div>
-<h3 id="5-folds-are-specified-to-show-that-1-fold-is-for-test-and-remaining-is-for-train-set-this-is-repeated-for-the-next-fold-and-so-on-minimum-needs-to-be-2">5 folds are specified to show that 1 fold is for test and remaining is for train set. This is repeated for the next fold and so on. Minimum needs to be 2</h3>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">for</span> <span class="n">d_ind</span><span class="p">,</span> <span class="n">v_ind</span> <span class="ow">in</span> <span class="n">k_fold</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">train_x</span><span class="p">):</span>
-    
-    <span class="n">d_x</span><span class="p">,</span> <span class="n">v_x</span> <span class="o">=</span> <span class="n">train_x</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">d_ind</span><span class="p">,</span> <span class="p">:],</span> <span class="n">train_x</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">v_ind</span><span class="p">,</span> <span class="p">:]</span>
-    <span class="n">d_y</span><span class="p">,</span> <span class="n">v_y</span> <span class="o">=</span> <span class="n">train_y</span><span class="p">[</span><span class="n">d_ind</span><span class="p">],</span> <span class="n">train_y</span><span class="p">[</span><span class="n">v_ind</span><span class="p">]</span>
-    <span class="n">pred_test</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">evals_result</span> <span class="o">=</span> <span class="n">run_lgb</span><span class="p">(</span><span class="n">d_x</span><span class="p">,</span> <span class="n">d_y</span><span class="p">,</span> <span class="n">v_x</span><span class="p">,</span> <span class="n">v_y</span><span class="p">,</span> <span class="n">test_x</span><span class="p">)</span> <span class="c1">#Running LightGBM here</span>
-    <span class="n">pred_test_final</span> <span class="o">+=</span> <span class="n">pred_test</span>
-<span class="n">pred_test_final</span> <span class="o">/=</span> <span class="mi">5</span>
-<span class="n">pred_test_final</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">expm1</span><span class="p">(</span><span class="n">pred_test_final</span><span class="p">)</span> <span class="c1">#e(pred_test_final)-1</span></code></pre></div>
+    <span class="c1">#Create arrays from feature importance and feature names</span>
+    <span class="n">feature_importance</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">importance</span><span class="p">)</span>
+    <span class="n">feature_names</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">names</span><span class="p">)</span>
+
+    <span class="c1">#Create a DataFrame using a Dictionary</span>
+    <span class="n">data</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;feature_names&#39;</span><span class="p">:</span><span class="n">feature_names</span><span class="p">,</span><span class="s1">&#39;feature_importance&#39;</span><span class="p">:</span><span class="n">feature_importance</span><span class="p">}</span>
+    <span class="n">fi_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+    <span class="c1">#Sort the DataFrame in order decreasing feature importance</span>
+    <span class="n">fi_df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;feature_importance&#39;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+    <span class="c1">#Define size of bar plot</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+    <span class="c1">#Plot Searborn bar chart</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">fi_df</span><span class="p">[</span><span class="s1">&#39;feature_importance&#39;</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="n">fi_df</span><span class="p">[</span><span class="s1">&#39;feature_names&#39;</span><span class="p">])</span>
+    <span class="c1">#Add chart labels</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">model_type</span> <span class="o">+</span> <span class="s1">&#39; FEATURE IMPORTANCE&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;FEATURE IMPORTANCE&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;FEATURE NAMES&#39;</span><span class="p">)</span></code></pre></div>
+<p>Call this by passing model.feature<em>importances</em>, columns in dataset and Name of Model</p>
+
 </div>
   <aside>
       

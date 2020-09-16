@@ -6,10 +6,19 @@
     <description>Recent content on Charles CSR</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 11 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 16 Sep 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://charlescsr.github.io/mlnotes/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Plot Feature Importance</title>
+      <link>https://charlescsr.github.io/mlnotes/python/plots/feature-importance/</link>
+      <pubDate>Wed, 16 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://charlescsr.github.io/mlnotes/python/plots/feature-importance/</guid>
+      <description>def plot_feature_importance(importance,names,model_type): #Create arrays from feature importance and feature names feature_importance = np.array(importance) feature_names = np.array(names) #Create a DataFrame using a Dictionary data={&amp;#39;feature_names&amp;#39;:feature_names,&amp;#39;feature_importance&amp;#39;:feature_importance} fi_df = pd.DataFrame(data) #Sort the DataFrame in order decreasing feature importance fi_df.sort_values(by=[&amp;#39;feature_importance&amp;#39;], ascending=False,inplace=True) #Define size of bar plot plt.figure(figsize=(10,8)) #Plot Searborn bar chart sns.barplot(x=fi_df[&amp;#39;feature_importance&amp;#39;], y=fi_df[&amp;#39;feature_names&amp;#39;]) #Add chart labels plt.title(model_type + &amp;#39; FEATURE IMPORTANCE&amp;#39;) plt.xlabel(&amp;#39;FEATURE IMPORTANCE&amp;#39;) plt.ylabel(&amp;#39;FEATURE NAMES&amp;#39;) Call this by passing model.featureimportances, columns in dataset and Name of Model</description>
+    </item>
     
     <item>
       <title>Read Values other than NaN as NaN</title>
