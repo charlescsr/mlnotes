@@ -34,7 +34,7 @@
   "@type": "BlogPosting",
   "headline": "Method to find best classifier",
   "url": "https://charlescsr.github.io/mlnotes/python/sklearn/find-the-best-classifier/",
-  "wordCount": "106",
+  "wordCount": "139",
   "datePublished": "2020-08-08T00:00:00&#43;00:00",
   "dateModified": "2020-08-08T00:00:00&#43;00:00",
   "author": {
@@ -134,20 +134,20 @@ MathJax.Hub.Config({
 <span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">GradientBoostingClassifier</span>
 <span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LogisticRegression</span>
 <span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">GridSearchCV</span>
-<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">f1_score</span><span class="p">,</span> <span class="n">confusion_matrix</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">classifiers</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;mnb&#39;</span><span class="p">:</span> <span class="n">MultinomialNB</span><span class="p">(),</span>
-    <span class="s1">&#39;gnb&#39;</span><span class="p">:</span> <span class="n">GaussianNB</span><span class="p">(),</span>
-    <span class="s1">&#39;svm1&#39;</span><span class="p">:</span> <span class="n">SVC</span><span class="p">(</span><span class="n">kernel</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">),</span>
-    <span class="s1">&#39;svm2&#39;</span><span class="p">:</span> <span class="n">SVC</span><span class="p">(</span><span class="n">kernel</span><span class="o">=</span><span class="s1">&#39;rbf&#39;</span><span class="p">),</span>
-    <span class="s1">&#39;svm3&#39;</span><span class="p">:</span> <span class="n">SVC</span><span class="p">(</span><span class="n">kernel</span><span class="o">=</span><span class="s1">&#39;sigmoid&#39;</span><span class="p">),</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">f1_score</span><span class="p">,</span> <span class="n">confusion_matrix</span><span class="p">,</span> <span class="n">accuracy_score</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">classifiers</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;Multinomial NB&#39;</span><span class="p">:</span> <span class="n">MultinomialNB</span><span class="p">(),</span>
+    <span class="s1">&#39;Gaussian NB&#39;</span><span class="p">:</span> <span class="n">GaussianNB</span><span class="p">(),</span>
+    <span class="s1">&#39;Linear SVM&#39;</span><span class="p">:</span> <span class="n">SVC</span><span class="p">(</span><span class="n">kernel</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">),</span>
+    <span class="s1">&#39;RBF SVM&#39;</span><span class="p">:</span> <span class="n">SVC</span><span class="p">(</span><span class="n">kernel</span><span class="o">=</span><span class="s1">&#39;rbf&#39;</span><span class="p">),</span>
+    <span class="s1">&#39;Sigmoid SVM&#39;</span><span class="p">:</span> <span class="n">SVC</span><span class="p">(</span><span class="n">kernel</span><span class="o">=</span><span class="s1">&#39;sigmoid&#39;</span><span class="p">),</span>
     <span class="c1">#FOR SVM USE HYPERPARAMETER TUNING TO BETTER UNDERSTAND WHAT TO TAKE</span>
-    <span class="s1">&#39;mlp1&#39;</span><span class="p">:</span> <span class="n">MLPClassifier</span><span class="p">(),</span>
-    <span class="s1">&#39;mlp2&#39;</span><span class="p">:</span> <span class="n">MLPClassifier</span><span class="p">(</span><span class="n">hidden_layer_sizes</span><span class="o">=</span><span class="p">[</span><span class="mi">100</span><span class="p">,</span><span class="mi">100</span><span class="p">]),</span>
-    <span class="s1">&#39;ada&#39;</span><span class="p">:</span> <span class="n">AdaBoostClassifier</span><span class="p">(),</span>
-    <span class="s1">&#39;dtc&#39;</span><span class="p">:</span> <span class="n">DecisionTreeClassifer</span><span class="p">(),</span>
-    <span class="s1">&#39;rfc&#39;</span><span class="p">:</span> <span class="n">RandomForestClassifer</span><span class="p">(),</span>
-    <span class="s1">&#39;gbc&#39;</span><span class="p">:</span> <span class="n">GradientBoostingClassifer</span><span class="p">(),</span>
-    <span class="s1">&#39;lr&#39;</span><span class="p">:</span> <span class="n">LogisticRegression</span><span class="p">()</span>
+    <span class="s1">&#39;MLP Classifier&#39;</span><span class="p">:</span> <span class="n">MLPClassifier</span><span class="p">(),</span>
+    <span class="s1">&#39;MLP Hidden Layer&#39;</span><span class="p">:</span> <span class="n">MLPClassifier</span><span class="p">(</span><span class="n">hidden_layer_sizes</span><span class="o">=</span><span class="p">[</span><span class="mi">100</span><span class="p">,</span><span class="mi">100</span><span class="p">]),</span>
+    <span class="s1">&#39;Ada Boost&#39;</span><span class="p">:</span> <span class="n">AdaBoostClassifier</span><span class="p">(),</span>
+    <span class="s1">&#39;Decision Tree&#39;</span><span class="p">:</span> <span class="n">DecisionTreeClassifier</span><span class="p">(),</span>
+    <span class="s1">&#39;Random Forest&#39;</span><span class="p">:</span> <span class="n">RandomForestClassifier</span><span class="p">(),</span>
+    <span class="s1">&#39;Gradient Boosting&#39;</span><span class="p">:</span> <span class="n">GradientBoostingClassifier</span><span class="p">(),</span>
+    <span class="s1">&#39;Logistic Regression&#39;</span><span class="p">:</span> <span class="n">LogisticRegression</span><span class="p">()</span>
 <span class="p">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">f1_scores</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
 
 <span class="k">for</span> <span class="n">classifier</span> <span class="ow">in</span> <span class="n">classifiers</span><span class="p">:</span>
@@ -156,7 +156,15 @@ MathJax.Hub.Config({
     <span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train_x</span><span class="p">,</span><span class="n">test_x</span><span class="p">)</span>
     <span class="n">y_pred</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">train_y</span><span class="p">)</span>
     <span class="n">f1_scores</span><span class="p">[</span><span class="n">classifier</span><span class="p">]</span> <span class="o">=</span> <span class="n">f1_score</span><span class="p">(</span><span class="n">y_pred</span><span class="p">,</span> <span class="n">test_y</span><span class="p">)</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">classifier</span><span class="p">,</span> <span class="n">f1_scores</span><span class="p">[</span><span class="n">classifier</span><span class="p">])</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"></code></pre></div>
+    <span class="k">print</span><span class="p">(</span><span class="n">classifier</span><span class="p">,</span> <span class="n">f1_scores</span><span class="p">[</span><span class="n">classifier</span><span class="p">])</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">acc_scores</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">classifier</span> <span class="ow">in</span> <span class="n">classifiers</span><span class="p">:</span>
+    
+    <span class="n">clf</span> <span class="o">=</span> <span class="n">classifiers</span><span class="p">[</span><span class="n">classifier</span><span class="p">]</span>
+    <span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train_x</span><span class="p">,</span><span class="n">test_x</span><span class="p">)</span>
+    <span class="n">y_pred</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">train_y</span><span class="p">)</span>
+    <span class="n">f1_scores</span><span class="p">[</span><span class="n">classifier</span><span class="p">]</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_pred</span><span class="p">,</span> <span class="n">test_y</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">classifier</span><span class="p">,</span> <span class="n">acc_scores</span><span class="p">[</span><span class="n">classifier</span><span class="p">])</span></code></pre></div>
 </div>
   <aside>
       
