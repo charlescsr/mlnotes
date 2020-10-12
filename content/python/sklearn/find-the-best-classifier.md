@@ -61,8 +61,8 @@ acc_scores = dict()
 for classifier in classifiers:
     
     clf = classifiers[classifier]
-    clf.fit(train_x,test_x)
-    y_pred = clf.predict(train_y)
-    f1_scores[classifier] = accuracy_score(y_pred, test_y)
+    clf.fit(train_x,train_y)
+    y_pred = clf.predict(test_x)
+    acc_scores[classifier] = accuracy_score(y_pred, y_test)
     print(classifier, acc_scores[classifier])
 ```
